@@ -5,6 +5,9 @@
     <title>HTML Academy: Глэйси</title>
   </head>
   <body>
+    <input class="slider__toggle" type="radio" name="toggle" id="btn-1" checked>
+    <input class="slider__toggle" type="radio" name="toggle" id="btn-2">
+    <input class="slider__toggle" type="radio" name="toggle" id="btn-3">
     <div class="page-wrapper">
       <div class="content-wrapper">
         <header class="page-header">
@@ -79,6 +82,34 @@
             </div>
           </div>
         </header>
+        <main>
+          <section class="slider">
+            <h2 class="visually-hidden">Лучшие сочетания вкусов</h2>
+            <div class="slider-item" id="slide1">
+              <h3>Крем-брюле и пломбир с малиновым джемом</h3>
+              <a class="slider__btn btn btn--red" href="#">Давайте оба</a>
+            </div>
+            <div class="slider-item" id="slide2">
+              <h3>Крем-брюле и пломбир с малиновым джемом</h3>
+              <a class="slider__btn btn btn--red" href="#">Давайте оба</a>
+            </div>
+            <div class="slider-item" id="slide3">
+              <h3>Крем-брюле и пломбир с малиновым джемом</h3>
+              <a class="slider__btn btn btn--red" href="#">Давайте оба!</a>
+            </div>
+            <div class="slider__controls">
+              <label for="btn1">
+                <span class="visually-hidden">Первое сочетание</span>
+              </label>
+              <label for="btn2">
+                <span class="visually-hidden">Второе сочетание</span>
+              </label>
+              <label for="btn3">
+                <span class="visually-hidden">Третье сочетание</span>
+              </label>
+            </div>
+          </section>
+        </main>
       </div>
     </div>
   </body>
