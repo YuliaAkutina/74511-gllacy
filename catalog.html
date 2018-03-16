@@ -115,6 +115,11 @@
             </div>
           </div>
           <div class="page-header__flex-wrapper">
+            <ul class="page-header__breadcrumbs breadcrumbs">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="#"></a>Каталог</li>
+              <li>Сливочное</li>
+            </ul>
             <div class="page-header__contacts">
               <p class="page-header__working-hours">С 10 до 20, ежедневно
               </p>
@@ -125,6 +130,24 @@
           </div>
         </header>
         <main>
+          <h1 class="page-title">Сливочное мороженое</h1>
+          <section class="filters">
+            <h2 class="visually-hidden">Фильтры</h2>
+            <form class="filters__form" action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class="filters__item">
+                <legend>Сортировка:</legend>
+                <select class="filters__sorting" name="sorting">
+                  <option value="popular" selected>по популярности</option>
+                  <option value="low-priced">сначала недорогие</option>
+                  <option value="high-priced">сначала дорогие</option>
+                  <option value="butterfat">по жирности</option>
+                </select>
+              </fieldset>
+              <fieldset class="filters__item">
+                <legend>Цена:</legend>
+              </fieldset>
+            </form>
+          </section>
         </main>
         <footer class="page-footer page-footer--inner-page">
           <div class="page-footer__flex-wrapper">
