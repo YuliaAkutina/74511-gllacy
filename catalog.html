@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Глэйси</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="content-wrapper">
+        <header class="page-header">
+          <h1 class="visually-hidden">Gllacy - магазин по продаже мороженого</h1>
+          <div class="page-header__flex-wrapper">
+            <nav class="page-header__main-nav">
+              <a href="index.html" class="page-header__logo logo">
+                <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
+              </a>
+              <ul class="page-header__main-menu main-menu">
+                <li class="main-menu__item">
+                  <a class="main-menu__link main-menu__link--current">Каталог</a>
+                  <ul class="main-menu__submenu submenu">
+                    <li><a class="submenu__link" href="#">Новинки</a></li>
+                    <li><a class="submenu__link submenu__link--current">Сливочное</a></li>
+                    <li><a class="submenu__link" href="#">Щербеты</a></li>
+                    <li><a class="submenu__link" href="#">Фруктовый лед</a></li>
+                    <li><a class="submenu__link" href="#">Мелорин</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Доставка</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Оплата</a></li>
+              </ul>
+            </nav>
+            <div class="page-header__user-block">
+              <div class="page-header__user-item">
+                <a class="page-header__user-btn page-header__user-btn--search" href="#">
+                  <span class="visually-hidden">Поиск:</span>
+                </a>
+                <div class="page-header__popup page-header__popup--search">
+                  <form class="page-header__search-form search-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="visually-hidden" for="search-field">Введите запрос</label>
+                    <input type="search" name="search" id="search-field" placeholder="Что ищем?">
+                  </form>
+                </div>
+              </div>
+              <div class="page-header__user-item">
+                <a class="page-header__user-btn page-header__user-btn--login" href="#">Вход</a>
+                <div class="page-header__popup page-header__popup--login">
+                  <form class="page-header__login-form login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="visually-hidden" for="email-field">Электронная почта</label>
+                    <input type="email" name="email" id="email-field" placeholder="Электронная почта">
+                    <label class="visually-hidden" for="password-field">Пароль</label>
+                    <input type="password" name="password" id="password-field" placeholder="Пароль">
+                    <div class="login-form__flex-wrapper">
+                      <button class="login-form__btn btn" type="submit">Войти</button>
+                      <div class="login-form__links">
+                        <a href="#">Забыли пароль?</a>
+                        <a href="#">Новая регистрация</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="page-header__user-item">
+                <a class="page-header__user-btn page-header__user-btn--full-basket" href="#">
+                  <span class="visually-hidden">Корзина:</span>
+                  <span class="page-header__amount-basket">2</span>товара
+                </a>
+                <div class="page-header__popup page-header__popup--basket">
+                  <table class="page-header__basket basket">
+                    <caption class="visually-hidden">Вы выбрали:</caption>
+                    <tr>
+                      <td>
+                        <button class="basket__btn-del" type="button"><span class="visually-hidden">Убрать из заказа</span></button>
+                      </td>
+                      <td>
+                        <img src="img/product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                      </td>
+                      <td>
+                        Пломбир с апельсиновым джемом
+                      </td>
+                      <td>
+                        <span class="basket__weight">1,5 кг х </span><span class="basket__price">200 руб.</span>
+                      </td>
+                      <td>
+                        300 руб.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button class="basket__btn-del" type="button"><span class="visually-hidden">Убрать из заказа</span></button>
+                      </td>
+                      <td>
+                        <img src="img/product-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                      </td>
+                      <td>
+                        Клубничный пломбир с присыпкой из белого шоколада
+                      </td>
+                      <td>
+                        <span class="basket__weight">1,5 кг х </span><span class="basket__price">300 руб.</span>
+                      </td>
+                      <td>
+                        450 руб.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="5">
+                        Итого: 750 руб.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="5">
+                        <a class="basket__btn-buy btn" href="#">Оформить заказ</a>
+                    </tr>
+                  </table>
+              </div>
+            </div>
+          </div>
+          <div class="page-header__flex-wrapper">
+            <div class="page-header__contacts">
+              <p class="page-header__working-hours">С 10 до 20, ежедневно
+              </p>
+              <p class="page-header__tel">
+                <a href="tel:+78124502525">8 812 450-25-25</a>
+              </p>
+            </div>
+          </div>
+        </header>
+        <main>
+        </main>
+        <footer class="page-footer page-footer--inner-page">
+          <div class="page-footer__flex-wrapper">
+            <p class="page-footer__social">
+              <span class="social-links">
+                <a class="social-link social-link--tw" href="#">Мы в Твиттере</a>
+                <a class="social-link social-link--inst" href="#">Мы в Инстаграме</a>
+                <a class="social-link social-link--fb" href="#">Мы в Фейсбуке</a>
+                <a class="social-link social-link--vk" href="#">Мы во Вконтакте</a>
+              </span>
+            </p>
+            <ul class="page-footer__links">
+              <li><a class="page-footer__link-item page-footer__link-item--like" href="#">Для поставщиков</a></li>
+              <li><a class="page-footer__link-item" href="#">Наши документы</a></li>
+              <li><a class="page-footer__link-item" href="#">О производстве</a></li>
+              <li><a class="page-footer__link-item" href="#">Экологические стандарты</a></li>
+            </ul>
+            <div class="page-footer__copyright">
+              <a class="page-footer__logo-link" href="https://htmlacademy.ru/intensive/htmlcss">
+                <img src="img/htmlacademy-logo.svg" width="108" height="39" alt="Логотип HTML Academy">
+              </a>
+              <p class="page-footer__copyright-text">Сделано в <a class="page-footer__link-item" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
