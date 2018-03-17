@@ -144,8 +144,67 @@
                 </select>
               </fieldset>
               <fieldset class="filters__item">
-                <legend>Цена:</legend>
+                <legend>
+                  Цена:
+                  <output class="filters__out" name="filter-min">100</output> руб. –
+                  <output class="filters__out" name="filter-max">500</output> руб.
+                </legend>
+                <div class="filters__range">
+                  <div class="filters__scale">
+                    <div class="filters__bar">
+                    </div>
+                  </div>
+                  <button class="filters__toggle filters__toggle--min" type="button"><span class="visually-hidden">Минимальная цена</span></button>
+                  <button class="filters__toggle filters__toggle--max" type="button"><span class="visually-hidden">Максимальная цена</span></button>
+                </div>
               </fieldset>
+              <fieldset class="filters__item">
+                <legend>Жирность:</legend>
+                <ul class="filters__butterfat">
+                  <li class="filters__butterfat-item">
+                    <input class="visually-hidden" type="radio" name="butterfat" id="batterfat-0">
+                    <label for="butterfat-0">0%</label>
+                  </li>
+                  <li class="filters__butterfat-item">
+                    <input class="visually-hidden" type="radio" name="butterfat" id="batterfat-0-10" checked>
+                    <label for="butterfat-0-10">до 10%</label>
+                  </li>
+                  <li class="filters__butterfat-item">
+                    <input class="visually-hidden" type="radio" name="butterfat" id="batterfat-0-30">
+                    <label for="butterfat-0-30">до 30%</label>
+                  </li>
+                  <li class="filters__butterfat-item">
+                    <input class="visually-hidden" type="radio" name="butterfat" id="batterfat-30-100">
+                    <label for="butterfat-30-100">выше 30%</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filters__item">
+                <legend>Наполнители:</legend>
+                <ul class="filters__filling">
+                  <li class="filters__filling-item">
+                    <input class="visually-hidden" type="checkbox" name="filling-chokolate" id="filling-chokolate-field" checked>
+                    <label for="filling-chokolate-field">шоколадные</label>
+                  </li>
+                  <li class="filters__filling-item">
+                    <input class="visually-hidden" type="checkbox" name="filling-sugar" id="filling-sugar-field" checked>
+                    <label for="filling-sugar-field">сахарные присыпки</label>
+                  </li>
+                  <li class="filters__filling-item">
+                    <input class="visually-hidden" type="checkbox" name="filling-fruit" id="filling-fruit-field">
+                    <label for="filling-fruit-field">фрукты</label>
+                  </li>
+                  <li class="filters__filling-item">
+                    <input class="visually-hidden" type="checkbox" name="filling-syrup" id="filling-syrup-field">
+                    <label for="filling-syrup-field">сиропы</label>
+                  </li>
+                  <li class="filters__filling-item">
+                    <input class="visually-hidden" type="checkbox" name="filling-jam" id="filling-jam-field">
+                    <label for="filling-jam-field">джемы</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="filters__btn" type="submit">Применить</button>
             </form>
           </section>
         </main>
