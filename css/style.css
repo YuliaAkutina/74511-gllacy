@@ -477,6 +477,7 @@ img {
 
 .page-header__amount-basket {
   padding: 0 3px;
+  padding-left: 8px;
 }
 
 .page-header__user-btn--full-basket:hover,
@@ -572,7 +573,7 @@ img {
 
 /* Коризина */
 .page-header__popup--basket {
-  display: block;
+  padding: 20px 15px;
 }
 
 .page-header__user-item:hover .page-header__popup--basket {
@@ -581,5 +582,116 @@ img {
 
 .basket {
   width: 510px;
-  padding: 15px 20px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  vertical-align: top;
+  border-collapse: collapse;
+}
+
+.basket__del-cell,
+.basket__img-cell,
+.basket__title-cell,
+.basket__price-cell,
+.basket__cost-cell {
+  padding: 0;
+  padding-top: 9px;
+  padding-bottom: 16px;
+  vertical-align: top;
+}
+
+.basket__del-cell {
+  padding-top: 7px;
+  padding-right: 7px;
+}
+
+.basket__btn-del {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.basket__btn-del::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 7px;
+  left: 0;
+  width: 15px;
+  height: 1px;
+  background-color: #2c2829;
+  transform: rotate(-45deg);
+}
+
+.basket__btn-del::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 7px;
+  right: 0;
+  width: 15px;
+  height: 1px;
+  background-color: #2c2829;
+  transform: rotate(45deg);
+}
+
+.basket__img-cell {
+  width: 33px;
+  padding-top: 0;
+}
+
+.basket__img-cell img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.basket__title-cell {
+  width: 220px;
+  padding-left: 12px;
+  padding-right: 10px;
+}
+
+.basket__price-cell {
+  padding-left: 20px;
+}
+
+.basket__weight {
+  padding-right: 4px;
+}
+
+.basket__price {
+  padding-left: 4px;
+  color: #999999;
+}
+
+.basket__cost-cell {
+  padding-right: 5px;
+}
+
+.basket__total-cost-cell {
+  padding: 14px 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #323232;
+  text-align: right;
+  border-top: 1px solid #cacac7;
+}
+
+.basket__btn-cell {
+  padding: 0;
+  padding-bottom: 1px;
+  text-align: right;
+}
+
+.basket__btn-buy {
+  padding-left: 15px;
+  padding-right: 15px;
 }
