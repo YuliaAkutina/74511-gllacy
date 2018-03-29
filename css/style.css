@@ -26,8 +26,8 @@ a {
 }
 
 img {
-  /*width: 100%;
-  height: auto;*/
+  width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -822,6 +822,7 @@ img {
 /* Слайдер */
 .slider {
   position: relative;
+  margin-bottom: 42px;
   padding-top: 272px;
   text-align: center;
   color: #ffffff;
@@ -912,4 +913,196 @@ img {
 
 .page-wraaper::after {
   background-image: url("../img/slide-3.png");
+}
+
+/* Промо */
+.promo {
+  margin-bottom: 13px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.promo__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.promo__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 48.86%;
+  min-height: 230px;
+  margin-bottom: 20px;
+  padding: 17px 20px 24px 18px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.promo__item--raspberry {
+  background-color: #cd3b65;
+  background-image: url("../img/raspberries.jpg");
+}
+
+.promo__item--chocolate {
+  background-color: #522e1d;
+  background-image: url("../img/chokolate.jpg");
+}
+
+.promo__title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.promo__descr {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.promo__btn {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  padding: 10px 23px;
+}
+
+/* Популярные товары */
+.popular {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.popular-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  position: relative;
+  width: 23.3%;
+  margin-right: 2.26%;
+  margin-bottom: 20px;
+  padding-top: 7px;
+  text-align: center;
+}
+
+.product-item:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.product-item__preview {
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.product-item__image-wrapper {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.product-item__image-wrapper img {
+  border-radius: 50%;
+}
+
+.product-item--hit .product-item__preview::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background-color: #ffffff;
+  background-image: url("../img/hit.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+}
+
+.product-item__price {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.product-item__cost {
+  font-size: 45px;
+}
+
+.product-item__cost::after {
+  content: "";
+  display: inline-block;
+  width: 29px;
+  height: 34px;
+  margin-right: -7px;
+  padding-left: 7px;
+  vertical-align: middle;
+  background-color: transparent;
+  background-image: url("../img/ruble.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  -webkit-filter: drop-shadow(0 1px 3px rgba(49, 50, 53, 0.5));
+  filter: drop-shadow(0 1px 3px rgba(49, 50, 53, 0.5));
+}
+
+.product-item__title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.product-item__hover {
+  display: none;
 }
