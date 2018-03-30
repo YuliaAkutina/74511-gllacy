@@ -1036,10 +1036,12 @@ img {
 
 .product-item__preview {
   position: relative;
+  z-index: 300;
   margin-bottom: 7px;
 }
 
 .product-item__image-wrapper {
+  position: relative;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -1053,6 +1055,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 300;
   width: 61px;
   height: 61px;
   background-color: #ffffff;
@@ -1097,7 +1100,7 @@ img {
 
 .product-item__title {
   position: relative;
-  z-index: 200;
+  z-index: 300;
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
@@ -1148,7 +1151,7 @@ img {
   padding: 24px 20px;
   padding-right: 22px;
   font-size: 16px;
-  line-height: 22p;
+  line-height: 22px;
   font-weight: 400;
   color: #323232;
   background-color: #eee4cd;
@@ -1366,4 +1369,76 @@ img {
 .subscribe__btn {
   padding-left: 19px;
   padding-right: 19px;
+}
+
+/* Контакты и карта */
+.contacts {
+  position: relative;
+}
+
+.contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.contacts__ymap {
+  height: 430px;
+}
+
+.contacts__img {
+  display: none;
+}
+
+.contacts__wrapper {
+  min-height: 429px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #323232;
+  background-color: #ece5c8;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-origin: border-box;
+  border-top: 1px solid transparent;
+}
+
+.contacts__info {
+  position: relative;
+  z-index: 300;
+  width: 252px;
+  margin-top: 62px;
+  margin-right: 2.3%;
+  margin-left: auto;
+  padding: 29px 24px;
+  background-color: rgba(255, 255, 255, 0.98);
+  border-radius: 14px;
+}
+
+.contacts__info p {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+}
+
+.contacts__address-text {
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.contacts__assress-text--tel {
+  margin-top: 5px;
+}
+
+.contacts__btn {
+  display: block;
+  margin-top: 25px;
 }

@@ -252,31 +252,51 @@
             </div>
             </section>
           </div>
-          <section class="contacts">
+        </main>
+      </div>
+      <footer class="page-footer">
+          <section class="page-footer__contacts contacts">
             <h2 class="visually-hidden">Наши контакты</h2>
             <div class="contacts__map">
+              <div class="contacts__ymap" id="map"></div>
             </div>
-            <div class="contacts__wrapper">
-              <img src="img/map.jpg" width="1200" height="430" alt="Наш адрес: ул. Большая Конюшенная, 19/8, Санкт-Петербург">
+            <div class="contacts__wrapper content-wrapper">
+              <img class="contacts__img" src="img/map.jpg" width="1200" height="430" alt="Наш адрес: ул. Большая Конюшенная, 19/8, Санкт-Петербург">
               <div class="contacts__info">
                 <p>
                   Адрес главного офиса<br>
                   и офлайн-магазина:
-                  <b>ул. Большая Конюшенная<br>
+                  <b class="contacts__address-text">ул. Большая Конюшенная<br>
                   19/8, Санкт-Петербург</b>
                 </p>
                 <p>
                   Для заказов по телефону:
-                  <b>8 812 450-25-25</b>
+                  <b class="contacts__address-text contacts__assress-text--tel">8 812 450-25-25</b>
                   (с 10 до 20 ежедневно)
                 </p>
                 <a class="contacts__btn btn" href="#">Форма обратной связи</a>
               </div>
             </div>
+
+            <section class="modal-feedback">
+              <h2 class="visually-hidden">Обратная связь</h2>
+              <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="user-name-field">Как вас зовут?</label>
+                <input type="text" name="user-name" id="user-name-field" placeholder="Как вас зовут?">
+                <label class="visually-hidden" for="user-email-field">Ваша почта для ответа</label>
+                <input type="email" name="user-email" id="user-email-field" placeholder="Ваша почта для ответа?">
+                <label class="visually-hidden" for="feedback-field">Текст сообщения</label>
+                <textarea name="feedback" id="feedback-field" placeholder="Напишите что-нибудь...">
+                </textarea>
+                <button class="modal-feedback__btn btn" type="submit">Отправить</button>
+              </form>
+              <button class="modal-feedback__btn-close" type="button">Закрыть</button>
+            </section>
+
           </section>
-        </main>
-        <footer class="page-footer">
-          <div class="page-footer__flex-wrapper">
+
+          <div class="content-wrapper">
+            <div class="page-footer__wrapper">
             <p class="page-footer__social">
               <span class="social-links">
                 <a class="social-link social-link--tw" href="#">Мы в Твиттере</a>
@@ -298,22 +318,11 @@
               <p class="page-footer__copyright-text">Сделано в <a class="page-footer__link-item" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
             </div>
           </div>
+        </div>
+
         </footer>
-        <section class="modal-feedback">
-          <h2 class="visually-hidden">Обратная связь</h2>
-          <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="user-name-field">Как вас зовут?</label>
-            <input type="text" name="user-name" id="user-name-field" placeholder="Как вас зовут?">
-            <label class="visually-hidden" for="user-email-field">Ваша почта для ответа</label>
-            <input type="email" name="user-email" id="user-email-field" placeholder="Ваша почта для ответа?">
-            <label class="visually-hidden" for="feedback-field">Текст сообщения</label>
-            <textarea name="feedback" id="feedback-field" placeholder="Напишите что-нибудь...">
-            </textarea>
-            <button class="modal-feedback__btn btn" type="submit">Отправить</button>
-          </form>
-          <button class="modal-feedback__btn-close" type="button">Закрыть</button>
-        </section>
       </div>
-    </div>
+      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+      <script src="js/script.js"></script>
   </body>
 </html>
