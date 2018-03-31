@@ -1036,7 +1036,7 @@ img {
 
 .product-item__preview {
   position: relative;
-  z-index: 300;
+  z-index: 100;
   margin-bottom: 7px;
 }
 
@@ -1113,7 +1113,7 @@ img {
   position: absolute;
   top: 0;
   left: -4.87%;
-  z-index: 100;
+  z-index: 200;
   display: none;
   width: 100%;
   height: 115%;
@@ -1129,7 +1129,8 @@ img {
   padding-left: 15px;
 }
 
-.product-item:hover .product-item__hover {
+.product-item:hover .product-item__hover,
+.product-item:focus .product-item__hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1143,6 +1144,10 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.product-item:hover .product-item__preview {
+  z-index: 300;
 }
 
 /* Преимущества */
@@ -1382,10 +1387,11 @@ img {
   left: 0;
   z-index: 100;
   width: 100%;
+  height: 100%;
 }
 
 .contacts__ymap {
-  height: 430px;
+  height: 100%;
 }
 
 .contacts__img {
@@ -1441,4 +1447,283 @@ img {
 .contacts__btn {
   display: block;
   margin-top: 25px;
+}
+
+/* Модальное окно */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-feedback {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  z-index: 400;
+  display: none;
+  width: 429px;
+  margin-left: -239px;
+  padding-right: 25px;
+  padding-left: 24px;
+  padding-top: 15px;
+  padding-bottom: 27px;
+  font-size: 16px;
+  background-color: #f8f7f4;
+  border-radius: 8px;
+}
+
+.modal-feedback b {
+  display: block;
+  margin-bottom: 19px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #323232;
+}
+
+.modal-feedback__btn-close {
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-feedback__btn-close::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #323232;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.modal-feedback__btn-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #323232;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.modal-feedback__input {
+  display: block;
+  width: 63%;
+  margin-bottom: 19px;
+}
+
+.modal-feedback__textarea {
+  width: 100%;
+  min-height: 155px;
+  margin-bottom: 20px;
+}
+
+.modal-feedback__input::-webkit-input-placeholder,
+.modal-feedback__textarea::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+.modal-feedback__input::-moz-placeholder,
+.modal-feedback__textarea::-moz-placeholder {
+  font-size: 16px;
+}
+
+.modal-feedback__input:-moz-placeholder,
+.modal-feedback__textarea:-moz-placeholder {
+  font-size: 16px;
+}
+
+.modal-feedback__input:-ms-input-placeholder,
+.modal-feedback__textarea:-ms-input-placeholder {
+  font-size: 16px;
+}
+
+.modal-feedback__btn {
+  display: block;
+  margin-left: auto;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+.page-footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-left: 2.3%;
+  margin-right: 2.3%;
+  padding-top: 17px;
+  padding-bottom: 20px;
+}
+
+/* Иконки социальных сетей */
+.page-footer__social {
+  margin-top: 19px;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+.social-link {
+  width: 34px;
+  height: 34px;
+  margin-right: 11px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.social-link:active {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.social-link::before {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 34px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.social-link:hover::before,
+.social-link:focus::before {
+  opacity: 1;
+}
+
+.social-link:active::before {
+  opacity: 0.7;
+}
+
+.social-link--tw::before {
+  background-image: url("../img/twitter.svg");;
+}
+
+.social-link--inst::before {
+  background-image: url("../img/instagram.svg");;
+}
+
+.social-link--fb::before {
+  background-image: url("../img/fb.svg");
+}
+
+.social-link--vk::before {
+  background-image: url("../img/vk.svg");
+}
+
+/* Список ссылок */
+.page-footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 356px;
+  margin: 0;
+  margin-top: 17px;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.page-footer__links li {
+  min-width: 120px;
+  margin-bottom: 4px;
+  padding-left: 23px;
+}
+
+.page-footer__link-item {
+  color: #ffffff;
+  background-position: 0 1.1em;
+}
+
+.page-footer__link-item--like {
+  position: relative;
+}
+
+.page-footer__link-item--like::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -23px;
+  display: block;
+  width: 17px;
+  height: 13px;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Копирайт */
+.page-footer__copyright {
+  max-width: 200px;
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.page-footer__logo-link {
+  display: block;
+  width: 108px;
+}
+
+.page-footer__copyright-text {
+  margin: 0;
+  padding: 0;
+}
+
+.page-footer__wrapper--inner-page {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
