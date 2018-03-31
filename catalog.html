@@ -153,14 +153,14 @@
           </div>
         </div>
       </header>
-      <main>
+      <main class="container">
         <h1 class="page-title">Сливочное мороженое</h1>
         <section class="filters">
           <h2 class="visually-hidden">Фильтры</h2>
           <form class="filters__form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="filters__item">
-              <legend>Сортировка:</legend>
-              <select class="filters__sorting" name="sorting">
+              <legend class="filters__title">Сортировка:</legend>
+              <select class="filters__filter filters__sorting" name="sorting">
                 <option value="popular" selected>по популярности</option>
                 <option value="low-priced">сначала недорогие</option>
                 <option value="high-priced">сначала дорогие</option>
@@ -168,23 +168,25 @@
               </select>
             </fieldset>
             <fieldset class="filters__item">
-              <legend>
+              <legend class="filters__title">
                 Цена:
                 <output class="filters__out" name="filter-min">100</output> руб. –
                 <output class="filters__out" name="filter-max">500</output> руб.
               </legend>
-              <div class="filters__range">
-                <div class="filters__scale">
-                  <div class="filters__bar">
+                <div class="filters__filter">
+                <div class="filters__range">
+                  <div class="filters__scale">
+                    <div class="filters__bar">
+                    </div>
                   </div>
+                  <button class="filters__toggle filters__toggle--min" type="button"><span class="visually-hidden">Минимальная цена</span></button>
+                  <button class="filters__toggle filters__toggle--max" type="button"><span class="visually-hidden">Максимальная цена</span></button>
                 </div>
-                <button class="filters__toggle filters__toggle--min" type="button"><span class="visually-hidden">Минимальная цена</span></button>
-                <button class="filters__toggle filters__toggle--max" type="button"><span class="visually-hidden">Максимальная цена</span></button>
-              </div>
+            </div>
             </fieldset>
             <fieldset class="filters__item">
-              <legend>Жирность:</legend>
-              <ul class="filters__butterfat">
+              <legend class="filters__title">Жирность:</legend>
+              <ul class="filters__filter filters__butterfat">
                 <li class="filters__butterfat-item">
                   <input class="visually-hidden" type="radio" name="butterfat" id="butterfat-0" value="0">
                   <label for="butterfat-0">0%</label>
@@ -204,8 +206,8 @@
               </ul>
             </fieldset>
             <fieldset class="filters__item">
-              <legend>Наполнители:</legend>
-              <ul class="filters__filling">
+              <legend class="filters__title">Наполнители:</legend>
+              <ul class="filters__filter filters__filling">
                 <li class="filters__filling-item">
                   <input class="visually-hidden" type="checkbox" name="filling-chokolate" id="filling-chokolate-field" checked>
                   <label for="filling-chokolate-field">шоколадные</label>

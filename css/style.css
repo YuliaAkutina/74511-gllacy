@@ -809,16 +809,6 @@ img {
   color: #ffffff;
 }
 
-/* Заголовок внутренней страницы */
-.page-title {
-  margin: 0;
-  margin-bottom: 25px;
-  padding: 0;
-  font-size: 35px;
-  line-height: 41px;
-  font-weight: bold;
-}
-
 /* Слайдер */
 .slider {
   position: relative;
@@ -1726,4 +1716,99 @@ img {
 
 .page-footer__wrapper--inner-page {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Заголовок внутренней страницы */
+.page-title {
+  margin: 0;
+  margin-top: -2px;
+  margin-bottom: 26px;
+  padding: 0;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+}
+
+.filters {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.filters__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 860px;
+  margin: 0;
+  padding: 0;
+}
+
+.filters__item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filters__title {
+  padding-left: 16px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filters__filter {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 36px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+}
+
+.filters__sorting {
+  min-width: 194px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  background-image: url("../img/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 11px 10px;
+  background-clip: border-box;
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
+.filters__sorting::-ms-expand {
+  display: none;
+}
+
+.filters__sorting option {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.filters__sorting:hover,
+.filters__sorting:focus {
+  color: #323232;
+  background-image: url("../img/select-arrow-black.svg");
 }
