@@ -1889,8 +1889,14 @@ img {
 
 .filters__butterfat,
 .filters__filling {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 36px;
   margin: 0;
@@ -1905,6 +1911,7 @@ img {
 }
 
 .filters__butterfat-item {
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 18px;
 }
@@ -2005,7 +2012,7 @@ img {
 
 .filters__btn:active {
   color: #323232;
-  background-color: rgba(234, 234, 234);
+  background-color: rgba(234, 234, 234, 1);
   box-shadow: inset 0 2px 1px rgba(105, 105, 105, 1);
 }
 
@@ -2024,14 +2031,86 @@ img {
   align-content: stretch;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 60px;
+  margin-bottom: 46px;
 }
 
+/* Пагинатор */
 .paginator {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.paginator__page-link,
+.paginator__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 27px;
+}
+
+.paginator__page-link {
+  width: 27px;
+  margin-left: 1px;
+  margin-right: 1px;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.paginator__page-link--current {
+  color: #353535;
+  background-color: #ffffff;
+}
+
+.paginator__page-link:hover:not(.paginator__page-link--current),
+.paginator__page-link:focus:not(.paginator__page-link--current) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.paginator__page-link:active:not(.paginator__page-link--current) {
+  color: #353535;
+  background-color: #ffffff;
+}
+
+.paginator__arrow {
+  width: 10px;
+  background-color: transparent;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.paginator__arrow--prev {
+  margin-left: 0;
+  margin-right: 12px;
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
+  transform: scale(-1);
+}
+
+.paginator__arrow--next {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+.paginator__arrow--disabled {
+  opacity: 0.2;
 }
