@@ -1882,6 +1882,12 @@ img {
   cursor: pointer;
 }
 
+/* Для Edge */
+.filters__label:hover,
+.filters__label:focus {
+  color: #323232;
+}
+
 .filters__input:hover + .filters__label,
 .filters__input:focus + .filters__label {
   color: #323232;
