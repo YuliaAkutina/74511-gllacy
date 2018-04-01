@@ -9,9 +9,9 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <input class="visually-hidden slider__toggle" type="radio" name="toggle" id="btn-1" checked>
-    <input class="visually-hidden slider__toggle" type="radio" name="toggle" id="btn-2">
-    <input class="visually-hidden slider__toggle" type="radio" name="toggle" id="btn-3">
+    <input class="visually-hidden slider__toggle slider__toggle--1" type="radio" name="toggle" id="btn-1" checked>
+    <input class="visually-hidden slider__toggle slider__toggle--2" type="radio" name="toggle" id="btn-2">
+    <input class="visually-hidden slider__toggle slider__toggle--3" type="radio" name="toggle" id="btn-3">
     <div class="page-wrapper">
       <div class="content-wrapper">
         <header class="page-header container">
@@ -111,15 +111,15 @@
               </label>
             </div>
             <h2 class="visually-hidden">Лучшие сочетания вкусов</h2>
-            <div class="slider-item" id="slide1">
+            <div class="slider-item slider-item--1">
               <h3 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h3>
               <a class="slider__btn btn" href="#">Давайте оба!</a>
             </div>
-            <div class="slider-item" id="slide2">
+            <div class="slider-item slider-item--2">
               <h3 class="slider-title">Шоколадный пломбир и лимонный сорбет </h3>
               <a class="slider__btn btn" href="#">Давайте оба!</a>
             </div>
-            <div class="slider-item" id="slide3">
+            <div class="slider-item slider-item--3">
               <h3 class="slider-title">Пломбир с помадкой<br> и клубничный щербет</h3>
               <a class="slider__btn btn" href="#">Давайте оба!</a>
             </div>
@@ -142,7 +142,7 @@
           <section class="popular container">
             <h2 class="visually-hidden">Самые популярные товары</h2>
             <div class="popular-items">
-              <article class="product-item product-item--hit">
+              <article class="product-item product-item--hit product-item--popular">
                 <div class="product-item__preview">
                   <div class="product-item__image-wrapper">
                     <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -160,7 +160,7 @@
                   <button class="product-item__btn btn" type="button">Быстрый просмотр</button>
                 </div>
               </article>
-              <article class="product-item product-item--hit">
+              <article class="product-item product-item--hit product-item--popular">
                 <div class="product-item__preview">
                   <div class="product-item__image-wrapper">
                     <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
@@ -178,7 +178,7 @@
                   <button class="product-item__btn btn" type="button">Быстрый просмотр</button>
                 </div>
               </article>
-              <article class="product-item product-item--hit">
+              <article class="product-item product-item--hit product-item--popular">
                 <div class="product-item__preview">
                   <div class="product-item__image-wrapper">
                     <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
@@ -196,7 +196,7 @@
                   <button class="product-item__btn btn" type="button">Быстрый просмотр</button>
                 </div>
               </article>
-              <article class="product-item product-item--hit">
+              <article class="product-item product-item--hit product-item--popular">
                 <div class="product-item__preview">
                   <div class="product-item__image-wrapper">
                     <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
@@ -246,7 +246,7 @@
               <p class="subscribe__descr">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="subscribe-email-field">Электронная почта</label>
-                <input class="input-text subscribe__input" type="email" name="subscribe-email" id="subscribe-email-field" placeholder="Электронная почта">
+                <input class="input-text subscribe__input" type="email" name="subscribe-email" id="subscribe-email-field" placeholder="Электронная почта" required>
                 <button class="subscribe__btn btn" type="submit">Отправить</button>
               </form>
             </div>

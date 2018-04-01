@@ -157,7 +157,7 @@
         <h1 class="page-title">Сливочное мороженое</h1>
         <section class="filters">
           <h2 class="visually-hidden">Фильтры</h2>
-          <form class="filters__form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="filters__form" action="https://echo.htmlacademy.ru" method="post" oninput>
             <fieldset class="filters__item">
               <legend class="filters__title">Сортировка:</legend>
               <select class="filters__filter filters__sorting" name="sorting">
@@ -173,35 +173,33 @@
                 <output class="filters__out" name="filter-min">100</output> руб. –
                 <output class="filters__out" name="filter-max">500</output> руб.
               </legend>
-                <div class="filters__filter">
-                <div class="filters__range">
+                <div class="filters__range filters__filter">
                   <div class="filters__scale">
                     <div class="filters__bar">
                     </div>
                   </div>
-                  <button class="filters__toggle filters__toggle--min" type="button"><span class="visually-hidden">Минимальная цена</span></button>
-                  <button class="filters__toggle filters__toggle--max" type="button"><span class="visually-hidden">Максимальная цена</span></button>
+                  <div class="filters__toggle filters__toggle--min" tabindex="0"><span class="visually-hidden">Минимальная цена</span></div>
+                  <div class="filters__toggle filters__toggle--max" tabindex="0"><span class="visually-hidden">Максимальная цена</span></div>
                 </div>
-            </div>
             </fieldset>
             <fieldset class="filters__item">
               <legend class="filters__title">Жирность:</legend>
               <ul class="filters__filter filters__butterfat">
                 <li class="filters__butterfat-item">
-                  <input class="visually-hidden" type="radio" name="butterfat" id="butterfat-0" value="0">
-                  <label for="butterfat-0">0%</label>
+                  <input class="filters__input visually-hidden" type="radio" name="butterfat" id="butterfat-0" value="0">
+                  <label class="filters__label filters__label--butterfat" for="butterfat-0">0%</label>
                 </li>
                 <li class="filters__butterfat-item">
-                  <input class="visually-hidden" type="radio" name="butterfat" id="butterfat-0-10" value="0-10" checked>
-                  <label for="butterfat-0-10">до 10%</label>
+                  <input class="filters__input visually-hidden" type="radio" name="butterfat" id="butterfat-0-10" value="0-10" checked>
+                  <label class="filters__label filters__label--butterfat" for="butterfat-0-10">до 10%</label>
                 </li>
                 <li class="filters__butterfat-item">
-                  <input class="visually-hidden" type="radio" name="butterfat" id="butterfat-0-30" value="0-30">
-                  <label for="butterfat-0-30">до 30%</label>
+                  <input class="filters__input visually-hidden" type="radio" name="butterfat" id="butterfat-0-30" value="0-30">
+                  <label class="filters__label filters__label--butterfat" for="butterfat-0-30">до 30%</label>
                 </li>
                 <li class="filters__butterfat-item">
-                  <input class="visually-hidden" type="radio" name="butterfat" id="butterfat-30-100" value="30-100">
-                  <label for="butterfat-30-100">выше 30%</label>
+                  <input class="filters__input visually-hidden" type="radio" name="butterfat" id="butterfat-30-100" value="30-100">
+                  <label class="filters__label filters__label--butterfat" for="butterfat-30-100">выше 30%</label>
                 </li>
               </ul>
             </fieldset>
@@ -209,31 +207,31 @@
               <legend class="filters__title">Наполнители:</legend>
               <ul class="filters__filter filters__filling">
                 <li class="filters__filling-item">
-                  <input class="visually-hidden" type="checkbox" name="filling-chokolate" id="filling-chokolate-field" checked>
-                  <label for="filling-chokolate-field">шоколадные</label>
+                  <input class="filters__input visually-hidden" type="checkbox" name="filling-chokolate" id="filling-chokolate-field" checked>
+                  <label class="filters__label filters__label--filling" for="filling-chokolate-field">шоколадные</label>
                 </li>
                 <li class="filters__filling-item">
-                  <input class="visually-hidden" type="checkbox" name="filling-sugar" id="filling-sugar-field" checked>
-                  <label for="filling-sugar-field">сахарные присыпки</label>
+                  <input class="filters__input visually-hidden" type="checkbox" name="filling-sugar" id="filling-sugar-field" checked>
+                  <label class="filters__label filters__label--filling" for="filling-sugar-field">сахарные присыпки</label>
                 </li>
                 <li class="filters__filling-item">
-                  <input class="visually-hidden" type="checkbox" name="filling-fruit" id="filling-fruit-field">
-                  <label for="filling-fruit-field">фрукты</label>
+                  <input class="filters__input visually-hidden" type="checkbox" name="filling-fruit" id="filling-fruit-field">
+                  <label class="filters__label filters__label--filling" for="filling-fruit-field">фрукты</label>
                 </li>
                 <li class="filters__filling-item">
-                  <input class="visually-hidden" type="checkbox" name="filling-syrup" id="filling-syrup-field">
-                  <label for="filling-syrup-field">сиропы</label>
+                  <input class="filters__input visually-hidden" type="checkbox" name="filling-syrup" id="filling-syrup-field">
+                  <label class="filters__label filters__label--filling" for="filling-syrup-field">сиропы</label>
                 </li>
                 <li class="filters__filling-item">
-                  <input class="visually-hidden" type="checkbox" name="filling-jam" id="filling-jam-field">
-                  <label for="filling-jam-field">джемы</label>
+                  <input class="filters__input visually-hidden" type="checkbox" name="filling-jam" id="filling-jam-field">
+                  <label class="filters__label filters__label--filling" for="filling-jam-field">джемы</label>
                 </li>
               </ul>
             </fieldset>
             <button class="filters__btn" type="submit">Применить</button>
           </form>
         </section>
-        <section class="catalog container">
+        <section class="catalog">
           <h2 class="visually-hidden">По вашему запросу найдено:</h2>
           <div class="catalog__items">
             <article class="product-item">
@@ -320,7 +318,7 @@
                 </p>
               </div>
               <h3 class="product-item__title">
-                <a class="product-item__link light-underline-link" href="#">Сливочное с брусничным джемом</a>
+                <a class="product-item__link light-underline-link" href="#">Сливочное с брусничным<br> джемом</a>
               </h3>
               <div class="product-item__hover">
                 <button class="product-item__btn btn" type="button">Быстрый просмотр</button>
@@ -392,7 +390,7 @@
                 </p>
               </div>
               <h3 class="product-item__title">
-                <a class="product-item__link light-underline-link" href="#">Сливочно-ванильное с кусочками шоколада</a>
+                <a class="product-item__link light-underline-link" href="#">Сливочно-ванильное с<br> кусочками шоколада</a>
               </h3>
               <div class="product-item__hover">
                 <button class="product-item__btn btn" type="button">Быстрый просмотр</button>
@@ -464,7 +462,7 @@
           </ul>
         </section>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer page-footer__inner-page">
         <div class="page-footer__wrapper page-footer__wrapper--inner-page">
           <p class="page-footer__social">
             <span class="social-links">
